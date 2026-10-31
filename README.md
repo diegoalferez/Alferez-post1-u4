@@ -1,6 +1,7 @@
 # Post-contenido — Unidad 4: JavaScript Básico
 
 **Estudiante:** Diego Alferez
+
 **Curso:** Programación Web — Universidad Francisco de Paula Santander (UFPS)
 
 ## Descripción
