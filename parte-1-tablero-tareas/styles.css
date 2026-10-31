@@ -1,0 +1,96 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6f8;
+  color: #1f2933;
+  margin: 0;
+  padding: 24px;
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+header h1 { margin: 0 0 20px; font-size: 1.8rem; }
+
+#controles, #filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+#filtros { justify-content: space-between; align-items: center; }
+.filtro-grupo { display: flex; flex-wrap: wrap; gap: 8px; }
+
+input, select, button {
+  font: inherit;
+  padding: 8px 12px;
+  border: 1px solid #b8c1cc;
+  border-radius: 6px;
+  background: #fff;
+}
+
+#controles input { flex: 1 1 180px; }
+
+button { cursor: pointer; }
+button:hover { background: #e8edf3; }
+button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid #1565c0;
+  outline-offset: 2px;
+}
+
+#btn-agregar { background: #1565c0; color: #fff; border-color: #1565c0; }
+#btn-agregar:hover { background: #0d47a1; }
+
+.btn-filtro-estado.activo { background: #1f2933; color: #fff; border-color: #1f2933; }
+
+#stats {
+  margin: 12px 0 18px;
+  font-weight: 600;
+  padding: 10px 14px;
+  background: #fff;
+  border-left: 4px solid #1565c0;
+  border-radius: 4px;
+}
+
+#tablero {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.tarea {
+  background: #fff;
+  border-radius: 8px;
+  padding: 14px;
+  border-left: 6px solid #9aa5b1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.tarea h3 { margin: 8px 0 4px; }
+.tarea p { margin: 0 0 12px; color: #52606d; }
+
+.badge-prioridad, .badge-estado {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-right: 4px;
+  color: #fff;
+}
+
+.badge-estado { background: #52606d; }
+
+.prioridad-alta .badge-prioridad { background: #c62828; }
+.prioridad-media .badge-prioridad { background: #ef6c00; }
+.prioridad-baja .badge-prioridad { background: #2e7d32; }
+
+.estado-pendiente { border-left-color: #9aa5b1; }
+.estado-en-progreso { border-left-color: #1565c0; }
+.estado-completada { border-left-color: #2e7d32; }
+.estado-completada h3 { text-decoration: line-through; }
+
+.acciones-tarea { display: flex; gap: 8px; }
+.btn-eliminar { color: #c62828; border-color: #c62828; }
+
+.oculta { display: none; }
